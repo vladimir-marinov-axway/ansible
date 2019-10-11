@@ -1,4 +1,5 @@
 --- 
 
 - src: https://github.com/vladimir-marinov-axway/ansible
+  version: master
   name: marinov
