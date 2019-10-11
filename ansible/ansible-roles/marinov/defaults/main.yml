@@ -1,0 +1,5 @@
+---
+# defaults file for .ansible/roles/marinov
+terraform_version: "0.12.8"
+terraform_arch: "linux_amd64"
+terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_{{ terraform_arch }}.zip"

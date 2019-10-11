@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Prepare directories 
+      file:
+        path: ~/bin 
+        mode: 0775
+        state: directory
+
+    - name: Get ansible role "marinov" from github 
+      command: ansible-galaxy install -r requirements.yml
+
+    - include_role: 
+        name: marinov

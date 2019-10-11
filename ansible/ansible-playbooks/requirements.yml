@@ -1,0 +1,4 @@
+--- 
+
+- src: https://github.com/vladimir-marinov-axway/ansible-roles
+  name: marinov

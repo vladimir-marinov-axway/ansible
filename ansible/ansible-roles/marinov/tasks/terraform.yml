@@ -1,0 +1,18 @@
+---
+
+- name: Download terraform archive into tmp folder 
+  get_url:
+    url: "{{ terraform_url }}"
+    dest: "/tmp/terraform_{{ terraform_version }}_{{ terraform_arch }}.zip"
+    mode: 0440
+
+- name: Extract terraform 
+  unarchive: 
+    src: "/tmp/terraform_{{ terraform_version }}_{{ terraform_arch }}.zip"
+    dest: ~/bin 
+
+- name: Check Terraform version
+  command: "terraform -v"
+  register: teravera 
+
+- debug: var=teravera 
